@@ -6,6 +6,6 @@ dependencies:
     wait: true
 
 deploy:
-  - env
+  - echo "VALUE=$OKTETO_DEPENDENCY_GOAPP_VARIABLE_APP_BUILD"
   - helm upgrade --install goapp chart --set image=${OKTETO_DEPENDENCY_GOAPP_VARIABLE_APP_BUILD} 
 
